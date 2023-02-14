@@ -21,7 +21,15 @@ const Modal = () => {
   };
 
   const postData = () => {
-    console.log("postData");
+    try {
+      fetch("http://localhost:8000/api/v1/systems/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
