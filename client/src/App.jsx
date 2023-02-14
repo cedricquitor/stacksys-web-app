@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { ListHeader, ListItem } from "./components";
+import { ListHeader, ListItem, Modal } from "./components";
 import { useState } from "react";
 
 const App = () => {
