@@ -9,3 +9,18 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.tick_svg_circle {
+  fill: none;
+  stroke: #000;
+  stroke-miterlimit: 10;
+  stroke-width: 32px;
+}
+
+.tick_svg_check {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 32px;
+}

@@ -12,4 +12,7 @@ app.use(cors());
 const systemsRoutes = require("./routes/systemsRoutes");
 app.use("/api/v1/systems", systemsRoutes);
 
-app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on port: ${PORT}`);
+  console.log(`http://localhost:8000/`);
+});
