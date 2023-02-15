@@ -7,6 +7,8 @@ app = express();
 // Init cors
 const cors = require("cors");
 app.use(cors());
+// JSON body
+app.use(express.json());
 
 // Routes
 const systemsRoutes = require("./routes/systemsRoutes");
