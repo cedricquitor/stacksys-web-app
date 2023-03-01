@@ -1,9 +1,10 @@
-import { useEffect } from "react";
-import { ListHeader, ListItem, Modal } from "./components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Auth, ListHeader, ListItem, Modal } from "./components";
 
 const App = () => {
   const [data, setData] = useState(null);
+
+  const [authToken, setAuthToken] = useState(false);
 
   const getData = async () => {
     const userEmail = "test@test.com";
@@ -25,10 +26,17 @@ const App = () => {
 
   return (
     <div className="bg-white shadow-lg rounded-xl p-4 w-[800px] mt-12">
-      <ListHeader listName={`🏝 Holiday tick list`} />
-      {sortedSystems?.map((system) => (
-        <ListItem key={system.id} system={system} />
-      ))}
+      {/* Render page when authToken exists */}
+      {authToken ? (
+        <>
+          <ListHeader listName={`🏝 Holiday tick list`} />
+          {sortedSystems?.map((system) => (
+            <ListItem key={system.id} system={system} />
+          ))}
+        </>
+      ) : (
+        <Auth />
+      )}
     </div>
   );
 };

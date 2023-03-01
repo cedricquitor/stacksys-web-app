@@ -15,7 +15,8 @@ const ListHeader = ({ listName }) => {
           Logout
         </button>
       </div>
-      <Modal />
+      {/* Uncomment to show modal */}
+      {/* <Modal /> */}
     </div>
   );
 };
