@@ -20,9 +20,9 @@ const Modal = () => {
     console.log(data);
   };
 
-  const postData = () => {
+  const postData = async () => {
     try {
-      fetch("http://localhost:8000/api/v1/systems/", {
+      const response = await fetch("http://localhost:8000/api/v1/systems/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
